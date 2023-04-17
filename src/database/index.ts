@@ -2,9 +2,9 @@ import Knex from 'knex';
 import { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_DATABASE } from '@config';
 
 const dbConnection = {
-  client: 'mysql',
+  client: 'postgresql',
   connection: {
-    charset: 'utf8',
+    charset: 'postgresql',
     timezone: 'UTC',
     user: DB_USER,
     password: DB_PASSWORD,
@@ -15,6 +15,11 @@ const dbConnection = {
   pool: {
     min: 2,
     max: 10,
+  },
+  migrations: {
+    tableName: 'migrations',
+    extension: 'ts',
+    directory: './database/migrations',
   },
 };
 

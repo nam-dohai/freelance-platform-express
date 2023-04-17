@@ -47,6 +47,10 @@ export class App {
 
   private connectToDatabase() {
     Model.knex(knex());
+    knex()
+      .raw('select 1+1 as result')
+      .then(() => console.log('Connect DB successful'))
+      .catch(error => console.log(error));
   }
 
   private initializeMiddlewares() {
