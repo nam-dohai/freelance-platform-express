@@ -8,7 +8,7 @@ paths:
     get:
       tags:
       - users
-      summary: Find All Users
+      summary: Find All User
       responses:
         200:
           description: 'OK'
@@ -103,6 +103,22 @@ paths:
         500:
           description: 'Server Error'
 
+  /userProfile/{id}:
+    get:
+        tags:
+        - userProfile
+        summary: Find User Profile
+        parameters:
+        - name: id
+          in: path
+          description: User Profile Id
+          required: true
+          type: string
+        responses:
+          200:
+            description: 'OK'
+          500:
+            description: 'Server Error'
 # definitions
 definitions:
   users:
