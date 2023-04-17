@@ -17,4 +17,4 @@ export class UserProfileModel extends Model implements UserProfile {
   static idColumn = 'id'; // id column name
 }
 
-export type UserShape = ModelObject<UserProfileModel>;
+export type UserProfileShape = ModelObject<UserProfileModel>;
