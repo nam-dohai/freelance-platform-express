@@ -20,6 +20,10 @@ export class CreateUserProfileDto {
   @IsString()
   @IsNotEmpty()
   public portfolio: string;
+
+  @IsString()
+  @IsNotEmpty()
+  public user_id: string;
 }
 
 export class UpdateUserProfileDto {
@@ -42,4 +46,8 @@ export class UpdateUserProfileDto {
   @IsString()
   @IsNotEmpty()
   public portfolio: string;
+
+  @IsString()
+  @IsNotEmpty()
+  public user_id: string;
 }

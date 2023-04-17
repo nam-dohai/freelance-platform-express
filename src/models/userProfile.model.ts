@@ -8,6 +8,7 @@ export class UserProfileModel extends Model implements UserProfile {
   title!: string;
   description!: string;
   portfolio!: string;
+  user_id!: string;
   createdAt: Date | null;
   updatedAt: Date | null;
   deleteAt: Date | null;
