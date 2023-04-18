@@ -6,6 +6,16 @@ import { ProjectService } from '@services/projects.service';
 export class ProjectController {
   public project = Container.get(ProjectService);
 
+  public getProjects = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const findAllProjectsData: Project[] = await this.project.findAllProject();
+
+      res.status(200).json({ data: findAllProjectsData });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public getProjectById = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const projectId = req.params.id;
@@ -20,7 +30,14 @@ export class ProjectController {
   public createProject = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const projectData: Project = req.body;
-      const createProjectData: Project = await this.project.createProject(projectData);
+      const createProjectData: Project = await this.project.createProject({
+        name: projectData.name,
+        description: projectData.description,
+        price: projectData.price,
+        author_id: projectData.author_id,
+        status: projectData.status,
+      });
+      await this.project.addCategoriesToProject(createProjectData.id, req.body.project_category_ids);
 
       res.status(201).json({ data: createProjectData });
     } catch (error) {
