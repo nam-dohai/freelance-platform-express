@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { Container } from 'typedi';
-import { ProjectCategory } from '@interfaces/projectCategories.projectCategories';
+import { ProjectCategory } from '@/interfaces/projectCategories.interface';
 import { ProjectCategoryService } from '@services/projectCategories.service';
 
 export class ProjectCategoryController {

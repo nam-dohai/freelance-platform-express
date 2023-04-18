@@ -1,5 +1,5 @@
 import { Model, ModelObject } from 'objection';
-import { ProjectCategory } from '@/interfaces/projectCategories.projectCategories';
+import { ProjectCategory } from '@/interfaces/projectCategories.interface';
 
 export class ProjectCategoryModel extends Model implements ProjectCategory {
   id!: string;
