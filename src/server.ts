@@ -4,6 +4,7 @@ import { UserRoute } from '@routes/users.route';
 import { UserProfileRoute } from '@routes/userProfile.route';
 import { ValidateEnv } from '@utils/validateEnv';
 import { ProjectRoute } from './routes/projects.route';
+import { PropositionRoute } from './routes/propositions.route';
 
 ValidateEnv();
 const routes = [];
@@ -11,6 +12,7 @@ routes.push(new AuthRoute());
 routes.push(new UserRoute());
 routes.push(new UserProfileRoute());
 routes.push(new ProjectRoute());
+routes.push(new PropositionRoute());
 
 const app = new App(routes);
 
