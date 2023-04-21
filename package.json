@@ -42,7 +42,6 @@
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "objection": "^3.0.1",
-    "pg": "^8.10.0",
     "pre-commit": "^1.2.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^5.0.0",
