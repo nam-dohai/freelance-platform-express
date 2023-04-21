@@ -5,7 +5,7 @@ import { Routes } from '@interfaces/routes.interface';
 import { ValidationMiddleware } from '@middlewares/validation.middleware';
 
 export class UserProfileRoute implements Routes {
-  public path = '/userProfile';
+  public path = '/users_profile';
   public router = Router();
   public userProfile = new UserProfileController();
 
