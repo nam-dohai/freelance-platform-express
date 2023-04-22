@@ -16,7 +16,7 @@ const swagger_ui_express_1 = tslib_1.__importDefault(require("swagger-ui-express
 const config_1 = require("./config");
 const database_1 = require("./database");
 const error_middleware_1 = require("./middlewares/error.middleware");
-const logger_1 = require("./utils/logger");
+// import { logger, stream } from './utils/logger';
 class App {
     constructor(routes) {
         this.app = (0, express_1.default)();
@@ -30,10 +30,10 @@ class App {
     }
     listen() {
         this.app.listen(this.port, () => {
-            logger_1.logger.info(`=================================`);
-            logger_1.logger.info(`======= ENV: ${this.env} =======`);
-            logger_1.logger.info(`🚀 App listening on the port ${this.port}`);
-            logger_1.logger.info(`=================================`);
+            // logger.info(`=================================`);
+            // logger.info(`======= ENV: ${this.env} =======`);
+            // logger.info(`🚀 App listening on the port ${this.port}`);
+            // logger.info(`=================================`);
         });
     }
     getServer() {
@@ -47,7 +47,8 @@ class App {
             .catch(error => console.log(error));
     }
     initializeMiddlewares() {
-        this.app.use((0, morgan_1.default)(config_1.LOG_FORMAT, { stream: logger_1.stream }));
+        // this.app.use(morgan(LOG_FORMAT, { stream }));
+        this.app.use((0, morgan_1.default)(config_1.LOG_FORMAT, {}));
         this.app.use((0, cors_1.default)({ origin: config_1.ORIGIN, credentials: config_1.CREDENTIALS }));
         this.app.use((0, hpp_1.default)());
         this.app.use((0, helmet_1.default)());
