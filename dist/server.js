@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = require("./app");
-const auth_route_1 = require("@routes/auth.route");
-const users_route_1 = require("@routes/users.route");
-const userProfile_route_1 = require("@routes/userProfile.route");
-const validateEnv_1 = require("@utils/validateEnv");
+const auth_route_1 = require("./routes/auth.route");
+const users_route_1 = require("./routes/users.route");
+const userProfile_route_1 = require("./routes/userProfile.route");
+const validateEnv_1 = require("./utils/validateEnv");
 const projects_route_1 = require("./routes/projects.route");
 const propositions_route_1 = require("./routes/propositions.route");
 const offers_route_1 = require("./routes/offers.route");

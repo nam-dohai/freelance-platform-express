@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.OfferService = void 0;
 const tslib_1 = require("tslib");
 const typedi_1 = require("typedi");
-const httpException_1 = require("@exceptions/httpException");
-const offers_model_1 = require("@models/offers.model");
+const httpException_1 = require("../exceptions/httpException");
+const offers_model_1 = require("../models/offers.model");
 let OfferService = class OfferService {
     async findAllOffers() {
         const offers = await offers_model_1.OfferModel.query().withGraphFetched('project').withGraphFetched('proponent').select().from('offers');

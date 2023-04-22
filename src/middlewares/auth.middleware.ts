@@ -1,10 +1,10 @@
 import { NextFunction, Response } from 'express';
 import { verify } from 'jsonwebtoken';
-import { SECRET_KEY } from '@config';
-import { HttpException } from '@exceptions/httpException';
-import { DataStoredInToken, RequestWithUser } from '@interfaces/auth.interface';
-import { User } from '@interfaces/users.interface';
-import { UserModel } from '@models/users.model';
+import { SECRET_KEY } from '../config';
+import { HttpException } from '../exceptions/httpException';
+import { DataStoredInToken, RequestWithUser } from '../interfaces/auth.interface';
+import { User } from '../interfaces/users.interface';
+import { UserModel } from '../models/users.model';
 
 const getAuthorization = req => {
   const coockie = req.cookies['Authorization'];

@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Container } from 'typedi';
-import { Project } from '@interfaces/projects.interface';
-import { ProjectService } from '@services/projects.service';
+import { Project } from '../interfaces/projects.interface';
+import { ProjectService } from '../services/projects.service';
 
 export class ProjectController {
   public project = Container.get(ProjectService);

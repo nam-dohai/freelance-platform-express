@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OfferController = void 0;
 const typedi_1 = require("typedi");
-const offers_service_1 = require("@services/offers.service");
+const offers_service_1 = require("../services/offers.service");
 class OfferController {
     constructor() {
         this.offer = typedi_1.Container.get(offers_service_1.OfferService);

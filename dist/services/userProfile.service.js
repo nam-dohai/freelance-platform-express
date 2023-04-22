@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserProfileService = void 0;
 const tslib_1 = require("tslib");
 const typedi_1 = require("typedi");
-const httpException_1 = require("@exceptions/httpException");
-const userProfile_model_1 = require("@models/userProfile.model");
+const httpException_1 = require("../exceptions/httpException");
+const userProfile_model_1 = require("../models/userProfile.model");
 let UserProfileService = class UserProfileService {
     async findUserProfileById(userProfileId) {
         const findUserProfile = await userProfile_model_1.UserProfileModel.query().findById(userProfileId);

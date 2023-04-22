@@ -1,5 +1,5 @@
-import { TokenData } from '@interfaces/auth.interface';
-import { User } from '@interfaces/users.interface';
+import { TokenData } from '../interfaces/auth.interface';
+import { User } from '../interfaces/users.interface';
 export declare class AuthService {
     signup(userData: User): Promise<User>;
     login(userData: User): Promise<{

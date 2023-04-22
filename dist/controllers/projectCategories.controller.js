@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProjectCategoryController = void 0;
 const typedi_1 = require("typedi");
-const projectCategories_service_1 = require("@services/projectCategories.service");
+const projectCategories_service_1 = require("../services/projectCategories.service");
 class ProjectCategoryController {
     constructor() {
         this.projectCategory = typedi_1.Container.get(projectCategories_service_1.ProjectCategoryService);

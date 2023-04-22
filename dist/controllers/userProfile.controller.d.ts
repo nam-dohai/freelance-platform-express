@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { UserProfileService } from '@services/userProfile.service';
+import { UserProfileService } from '../services/userProfile.service';
 export declare class UserProfileController {
     userProfile: UserProfileService;
     getUserProfileById: (req: Request, res: Response, next: NextFunction) => Promise<void>;

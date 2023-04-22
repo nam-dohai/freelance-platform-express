@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserRoute = void 0;
 const express_1 = require("express");
-const users_controller_1 = require("@/controllers/users.controller");
-const users_dto_1 = require("@dtos/users.dto");
-const validation_middleware_1 = require("@middlewares/validation.middleware");
+const users_controller_1 = require("../controllers/users.controller");
+const users_dto_1 = require("../dtos/users.dto");
+const validation_middleware_1 = require("../middlewares/validation.middleware");
 class UserRoute {
     constructor() {
         this.path = '/users';

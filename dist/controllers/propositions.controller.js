@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PropositionController = void 0;
 const typedi_1 = require("typedi");
-const propositions_service_1 = require("@services/propositions.service");
+const propositions_service_1 = require("../services/propositions.service");
 class PropositionController {
     constructor() {
         this.proposition = typedi_1.Container.get(propositions_service_1.PropositionService);

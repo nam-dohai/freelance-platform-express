@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Container } from 'typedi';
-import { UserProfile } from '@interfaces/userProfile.interface';
-import { UserProfileService } from '@services/userProfile.service';
+import { UserProfile } from '../interfaces/userProfile.interface';
+import { UserProfileService } from '../services/userProfile.service';
 
 export class UserProfileController {
   public userProfile = Container.get(UserProfileService);

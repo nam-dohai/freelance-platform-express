@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PropositionRoute = void 0;
 const express_1 = require("express");
-const propositions_controller_1 = require("@/controllers/propositions.controller");
-const propositions_dto_1 = require("@dtos/propositions.dto");
-const validation_middleware_1 = require("@middlewares/validation.middleware");
+const propositions_controller_1 = require("../controllers/propositions.controller");
+const propositions_dto_1 = require("../dtos/propositions.dto");
+const validation_middleware_1 = require("../middlewares/validation.middleware");
 class PropositionRoute {
     constructor() {
         this.path = '/propositions';

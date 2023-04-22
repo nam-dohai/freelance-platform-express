@@ -1,5 +1,5 @@
 import { Model, ModelObject } from 'objection';
-import { UserProfile } from '@interfaces/userProfile.interface';
+import { UserProfile } from '../interfaces/userProfile.interface';
 
 export class UserProfileModel extends Model implements UserProfile {
   id!: string;

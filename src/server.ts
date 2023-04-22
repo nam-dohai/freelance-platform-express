@@ -1,8 +1,8 @@
 import { App } from './app';
-import { AuthRoute } from '@routes/auth.route';
-import { UserRoute } from '@routes/users.route';
-import { UserProfileRoute } from '@routes/userProfile.route';
-import { ValidateEnv } from '@utils/validateEnv';
+import { AuthRoute } from './routes/auth.route';
+import { UserRoute } from './routes/users.route';
+import { UserProfileRoute } from './routes/userProfile.route';
+import { ValidateEnv } from './utils/validateEnv';
 import { ProjectRoute } from './routes/projects.route';
 import { PropositionRoute } from './routes/propositions.route';
 import { OfferRoute } from './routes/offers.route';

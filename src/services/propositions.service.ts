@@ -1,8 +1,8 @@
 import { Service } from 'typedi';
-import { CreatePropositionDto } from '@dtos/propositions.dto';
-import { HttpException } from '@exceptions/httpException';
-import { Proposition } from '@interfaces/propositions.interface';
-import { PropositionModel } from '@models/propositions.model';
+import { CreatePropositionDto } from '../dtos/propositions.dto';
+import { HttpException } from '../exceptions/httpException';
+import { Proposition } from '../interfaces/propositions.interface';
+import { PropositionModel } from '../models/propositions.model';
 
 @Service()
 export class PropositionService {

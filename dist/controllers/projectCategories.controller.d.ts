@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { ProjectCategoryService } from '@services/projectCategories.service';
+import { ProjectCategoryService } from '../services/projectCategories.service';
 export declare class ProjectCategoryController {
     projectCategory: ProjectCategoryService;
     getProjectCategories: (req: Request, res: Response, next: NextFunction) => Promise<void>;

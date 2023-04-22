@@ -1,8 +1,8 @@
 import { Service } from 'typedi';
-import { CreateProjectCategoryDto } from '@dtos/projectCategories.dto';
-import { HttpException } from '@exceptions/httpException';
-import { ProjectCategory } from '@/interfaces/projectCategories.interface';
-import { ProjectCategoryModel } from '@models/projectCategories.model';
+import { CreateProjectCategoryDto } from '../dtos/projectCategories.dto';
+import { HttpException } from '../exceptions/httpException';
+import { ProjectCategory } from '../interfaces/projectCategories.interface';
+import { ProjectCategoryModel } from '../models/projectCategories.model';
 
 @Service()
 export class ProjectCategoryService {

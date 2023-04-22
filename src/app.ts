@@ -9,11 +9,11 @@ import morgan from 'morgan';
 import { Model } from 'objection';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
-import { knex } from '@database';
-import { Routes } from '@interfaces/routes.interface';
-import { ErrorMiddleware } from '@middlewares/error.middleware';
-import { logger, stream } from '@utils/logger';
+import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from './config';
+import { knex } from './database';
+import { Routes } from './interfaces/routes.interface';
+import { ErrorMiddleware } from './middlewares/error.middleware';
+import { logger, stream } from './utils/logger';
 
 export class App {
   public app: express.Application;

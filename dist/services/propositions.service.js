@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PropositionService = void 0;
 const tslib_1 = require("tslib");
 const typedi_1 = require("typedi");
-const httpException_1 = require("@exceptions/httpException");
-const propositions_model_1 = require("@models/propositions.model");
+const httpException_1 = require("../exceptions/httpException");
+const propositions_model_1 = require("../models/propositions.model");
 let PropositionService = class PropositionService {
     async findAllPropositions() {
         const propositions = await propositions_model_1.PropositionModel.query()

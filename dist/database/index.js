@@ -3,17 +3,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.knex = void 0;
 const tslib_1 = require("tslib");
 const knex_1 = tslib_1.__importDefault(require("knex"));
-const _config_1 = require("@config");
+const config_1 = require("../config");
 const dbConnection = {
     client: 'postgresql',
     connection: {
         charset: 'postgresql',
         timezone: 'UTC',
-        user: _config_1.DB_USER,
-        password: _config_1.DB_PASSWORD,
-        host: _config_1.DB_HOST,
-        port: _config_1.DB_PORT,
-        database: _config_1.DB_DATABASE,
+        user: config_1.DB_USER,
+        password: config_1.DB_PASSWORD,
+        host: config_1.DB_HOST,
+        port: config_1.DB_PORT,
+        database: config_1.DB_DATABASE,
     },
     pool: {
         min: 2,

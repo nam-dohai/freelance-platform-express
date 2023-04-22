@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthRoute = void 0;
 const express_1 = require("express");
-const auth_controller_1 = require("@/controllers/auth.controller");
-const users_dto_1 = require("@dtos/users.dto");
-const auth_middleware_1 = require("@middlewares/auth.middleware");
-const validation_middleware_1 = require("@middlewares/validation.middleware");
+const auth_controller_1 = require("../controllers/auth.controller");
+const users_dto_1 = require("../dtos/users.dto");
+const auth_middleware_1 = require("../middlewares/auth.middleware");
+const validation_middleware_1 = require("../middlewares/validation.middleware");
 class AuthRoute {
     constructor() {
         this.path = '/';

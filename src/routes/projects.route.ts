@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { ProjectController } from '@/controllers/projects.controller';
-import { CreateProjectDto, UpdateProjectDto } from '@dtos/projects.dto';
-import { Routes } from '@interfaces/routes.interface';
-import { ValidationMiddleware } from '@middlewares/validation.middleware';
+import { ProjectController } from '../controllers/projects.controller';
+import { CreateProjectDto, UpdateProjectDto } from '../dtos/projects.dto';
+import { Routes } from '../interfaces/routes.interface';
+import { ValidationMiddleware } from '../middlewares/validation.middleware';
 
 export class ProjectRoute implements Routes {
   public path = '/projects';

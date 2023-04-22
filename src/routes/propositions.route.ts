@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { PropositionController } from '@/controllers/propositions.controller';
-import { CreatePropositionDto, UpdatePropositionDto } from '@dtos/propositions.dto';
-import { Routes } from '@interfaces/routes.interface';
-import { ValidationMiddleware } from '@middlewares/validation.middleware';
+import { PropositionController } from '../controllers/propositions.controller';
+import { CreatePropositionDto, UpdatePropositionDto } from '../dtos/propositions.dto';
+import { Routes } from '../interfaces/routes.interface';
+import { ValidationMiddleware } from '../middlewares/validation.middleware';
 
 export class PropositionRoute implements Routes {
   public path = '/propositions';

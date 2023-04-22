@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { OfferController } from '@/controllers/offers.controller';
-import { CreateOfferDto, UpdateOfferDto } from '@dtos/offers.dto';
-import { Routes } from '@interfaces/routes.interface';
-import { ValidationMiddleware } from '@middlewares/validation.middleware';
+import { OfferController } from '../controllers/offers.controller';
+import { CreateOfferDto, UpdateOfferDto } from '../dtos/offers.dto';
+import { Routes } from '../interfaces/routes.interface';
+import { ValidationMiddleware } from '../middlewares/validation.middleware';
 
 export class OfferRoute implements Routes {
   public path = '/offers';

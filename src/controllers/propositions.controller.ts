@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Container } from 'typedi';
-import { Proposition } from '@interfaces/propositions.interface';
-import { PropositionService } from '@services/propositions.service';
+import { Proposition } from '../interfaces/propositions.interface';
+import { PropositionService } from '../services/propositions.service';
 
 export class PropositionController {
   public proposition = Container.get(PropositionService);

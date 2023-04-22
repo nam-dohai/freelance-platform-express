@@ -13,15 +13,15 @@ const morgan_1 = tslib_1.__importDefault(require("morgan"));
 const objection_1 = require("objection");
 const swagger_jsdoc_1 = tslib_1.__importDefault(require("swagger-jsdoc"));
 const swagger_ui_express_1 = tslib_1.__importDefault(require("swagger-ui-express"));
-const _config_1 = require("@config");
-const _database_1 = require("@database");
-const error_middleware_1 = require("@middlewares/error.middleware");
-const logger_1 = require("@utils/logger");
+const config_1 = require("./config");
+const database_1 = require("./database");
+const error_middleware_1 = require("./middlewares/error.middleware");
+const logger_1 = require("./utils/logger");
 class App {
     constructor(routes) {
         this.app = (0, express_1.default)();
-        this.env = _config_1.NODE_ENV || 'development';
-        this.port = _config_1.PORT || 3000;
+        this.env = config_1.NODE_ENV || 'development';
+        this.port = config_1.PORT || 3000;
         this.connectToDatabase();
         this.initializeMiddlewares();
         this.initializeRoutes(routes);
@@ -40,15 +40,15 @@ class App {
         return this.app;
     }
     connectToDatabase() {
-        objection_1.Model.knex((0, _database_1.knex)());
-        (0, _database_1.knex)()
+        objection_1.Model.knex((0, database_1.knex)());
+        (0, database_1.knex)()
             .raw('select 1+1 as result')
             .then(() => console.log('Connect DB successful'))
             .catch(error => console.log(error));
     }
     initializeMiddlewares() {
-        this.app.use((0, morgan_1.default)(_config_1.LOG_FORMAT, { stream: logger_1.stream }));
-        this.app.use((0, cors_1.default)({ origin: _config_1.ORIGIN, credentials: _config_1.CREDENTIALS }));
+        this.app.use((0, morgan_1.default)(config_1.LOG_FORMAT, { stream: logger_1.stream }));
+        this.app.use((0, cors_1.default)({ origin: config_1.ORIGIN, credentials: config_1.CREDENTIALS }));
         this.app.use((0, hpp_1.default)());
         this.app.use((0, helmet_1.default)());
         this.app.use((0, compression_1.default)());

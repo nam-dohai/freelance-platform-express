@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProjectService = void 0;
 const tslib_1 = require("tslib");
 const typedi_1 = tslib_1.__importStar(require("typedi"));
-const httpException_1 = require("@exceptions/httpException");
-const projects_model_1 = require("@models/projects.model");
+const httpException_1 = require("../exceptions/httpException");
+const projects_model_1 = require("../models/projects.model");
 const projectsMapping_service_1 = require("./projectsMapping.service");
 let ProjectService = class ProjectService {
     async findAllProject() {

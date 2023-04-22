@@ -1,8 +1,8 @@
 import { Service } from 'typedi';
-import { CreateOfferDto } from '@dtos/offers.dto';
-import { HttpException } from '@exceptions/httpException';
-import { Offer } from '@interfaces/offers.interface';
-import { OfferModel } from '@models/offers.model';
+import { CreateOfferDto } from '../dtos/offers.dto';
+import { HttpException } from '../exceptions/httpException';
+import { Offer } from '../interfaces/offers.interface';
+import { OfferModel } from '../models/offers.model';
 
 @Service()
 export class OfferService {

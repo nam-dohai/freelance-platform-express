@@ -1,8 +1,8 @@
 import Container, { Service } from 'typedi';
-import { CreateProjectDto } from '@dtos/projects.dto';
-import { HttpException } from '@exceptions/httpException';
-import { Project } from '@interfaces/projects.interface';
-import { ProjectModel, ProjectShape } from '@models/projects.model';
+import { CreateProjectDto } from '../dtos/projects.dto';
+import { HttpException } from '../exceptions/httpException';
+import { Project } from '../interfaces/projects.interface';
+import { ProjectModel, ProjectShape } from '../models/projects.model';
 import { ProjectsMappingService } from './projectsMapping.service';
 
 @Service()

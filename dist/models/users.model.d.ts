@@ -1,5 +1,5 @@
 import { Model, ModelObject } from 'objection';
-import { User } from '@interfaces/users.interface';
+import { User } from '../interfaces/users.interface';
 export declare class UserModel extends Model implements User {
     id: number;
     email: string;

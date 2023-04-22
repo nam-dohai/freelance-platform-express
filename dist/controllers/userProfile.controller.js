@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserProfileController = void 0;
 const typedi_1 = require("typedi");
-const userProfile_service_1 = require("@services/userProfile.service");
+const userProfile_service_1 = require("../services/userProfile.service");
 class UserProfileController {
     constructor() {
         this.userProfile = typedi_1.Container.get(userProfile_service_1.UserProfileService);

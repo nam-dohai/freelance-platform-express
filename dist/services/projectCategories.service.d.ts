@@ -1,5 +1,5 @@
-import { CreateProjectCategoryDto } from '@dtos/projectCategories.dto';
-import { ProjectCategory } from '@/interfaces/projectCategories.interface';
+import { CreateProjectCategoryDto } from '../dtos/projectCategories.dto';
+import { ProjectCategory } from '../interfaces/projectCategories.interface';
 export declare class ProjectCategoryService {
     findAllProjectCategories(): Promise<ProjectCategory[]>;
     findProjectCategoryById(projectCategoryId: string): Promise<ProjectCategory>;

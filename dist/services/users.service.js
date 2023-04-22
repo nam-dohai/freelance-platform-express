@@ -4,8 +4,8 @@ exports.UserService = void 0;
 const tslib_1 = require("tslib");
 const bcrypt_1 = require("bcrypt");
 const typedi_1 = require("typedi");
-const httpException_1 = require("@exceptions/httpException");
-const users_model_1 = require("@models/users.model");
+const httpException_1 = require("../exceptions/httpException");
+const users_model_1 = require("../models/users.model");
 let UserService = class UserService {
     async findAllUser() {
         const users = await users_model_1.UserModel.query().select().from('users');

@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const supertest_1 = tslib_1.__importDefault(require("supertest"));
-const app_1 = require("@/app");
-const users_route_1 = require("@routes/users.route");
+const app_1 = require("../app");
+const users_route_1 = require("../routes/users.route");
 afterAll(async () => {
     await new Promise(resolve => setTimeout(() => resolve(), 500));
 });

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProjectsMappingService = void 0;
 const tslib_1 = require("tslib");
 const typedi_1 = require("typedi");
-const projectsMapping_model_1 = require("@models/projectsMapping.model");
+const projectsMapping_model_1 = require("../models/projectsMapping.model");
 let ProjectsMappingService = class ProjectsMappingService {
     async findAllProjectsMapping() {
         const projectsMapping = await projectsMapping_model_1.ProjectMappingModel.query().select().from('projects_mapping');

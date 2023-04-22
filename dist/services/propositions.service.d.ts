@@ -1,5 +1,5 @@
-import { CreatePropositionDto } from '@dtos/propositions.dto';
-import { Proposition } from '@interfaces/propositions.interface';
+import { CreatePropositionDto } from '../dtos/propositions.dto';
+import { Proposition } from '../interfaces/propositions.interface';
 export declare class PropositionService {
     findAllPropositions(): Promise<Proposition[]>;
     findPropositionById(propositionId: string): Promise<Proposition>;

@@ -1,5 +1,5 @@
 import { Model, ModelObject } from 'objection';
-import { ProjectMapping } from '@/interfaces/projectsMapping.interface';
+import { ProjectMapping } from '../interfaces/projectsMapping.interface';
 export declare class ProjectMappingModel extends Model implements ProjectMapping {
     id: string;
     project_id: string;

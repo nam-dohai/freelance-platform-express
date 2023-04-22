@@ -1,8 +1,8 @@
 import { Service } from 'typedi';
-import { CreateUserProfileDto } from '@dtos/userProfile.dto';
-import { HttpException } from '@exceptions/httpException';
-import { UserProfile } from '@interfaces/userProfile.interface';
-import { UserProfileModel } from '@models/userProfile.model';
+import { CreateUserProfileDto } from '../dtos/userProfile.dto';
+import { HttpException } from '../exceptions/httpException';
+import { UserProfile } from '../interfaces/userProfile.interface';
+import { UserProfileModel } from '../models/userProfile.model';
 
 @Service()
 export class UserProfileService {

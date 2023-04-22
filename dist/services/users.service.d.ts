@@ -1,5 +1,5 @@
-import { CreateUserDto } from '@dtos/users.dto';
-import { User } from '@interfaces/users.interface';
+import { CreateUserDto } from '../dtos/users.dto';
+import { User } from '../interfaces/users.interface';
 export declare class UserService {
     findAllUser(): Promise<User[]>;
     findUserById(userId: number): Promise<User>;

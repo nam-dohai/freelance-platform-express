@@ -1,5 +1,5 @@
 import { Model, ModelObject } from 'objection';
-import { Project } from '@interfaces/projects.interface';
+import { Project } from '../interfaces/projects.interface';
 import { UserProfileModel } from './userProfile.model';
 import { PropositionModel } from './propositions.model';
 import { OfferModel } from './offers.model';

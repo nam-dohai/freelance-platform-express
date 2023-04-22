@@ -1,5 +1,5 @@
-import { CreateOfferDto } from '@dtos/offers.dto';
-import { Offer } from '@interfaces/offers.interface';
+import { CreateOfferDto } from '../dtos/offers.dto';
+import { Offer } from '../interfaces/offers.interface';
 export declare class OfferService {
     findAllOffers(): Promise<Offer[]>;
     findOfferById(offerId: string): Promise<Offer>;

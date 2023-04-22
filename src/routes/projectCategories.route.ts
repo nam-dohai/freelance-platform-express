@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { ProjectCategoryController } from '@/controllers/projectCategories.controller';
-import { CreateProjectCategoryDto, UpdateProjectCategoryDto } from '@dtos/projectCategories.dto';
-import { Routes } from '@interfaces/routes.interface';
-import { ValidationMiddleware } from '@middlewares/validation.middleware';
+import { ProjectCategoryController } from '../controllers/projectCategories.controller';
+import { CreateProjectCategoryDto, UpdateProjectCategoryDto } from '../dtos/projectCategories.dto';
+import { Routes } from '../interfaces/routes.interface';
+import { ValidationMiddleware } from '../middlewares/validation.middleware';
 
 export class ProjectCategoryRoute implements Routes {
   public path = '/project_categories';

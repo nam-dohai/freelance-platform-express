@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { UserProfileController } from '@/controllers/userProfile.controller';
-import { CreateUserProfileDto, UpdateUserProfileDto } from '@dtos/userProfile.dto';
-import { Routes } from '@interfaces/routes.interface';
-import { ValidationMiddleware } from '@middlewares/validation.middleware';
+import { UserProfileController } from '../controllers/userProfile.controller';
+import { CreateUserProfileDto, UpdateUserProfileDto } from '../dtos/userProfile.dto';
+import { Routes } from '../interfaces/routes.interface';
+import { ValidationMiddleware } from '../middlewares/validation.middleware';
 
 export class UserProfileRoute implements Routes {
   public path = '/users_profile';

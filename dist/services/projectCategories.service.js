@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProjectCategoryService = void 0;
 const tslib_1 = require("tslib");
 const typedi_1 = require("typedi");
-const httpException_1 = require("@exceptions/httpException");
-const projectCategories_model_1 = require("@models/projectCategories.model");
+const httpException_1 = require("../exceptions/httpException");
+const projectCategories_model_1 = require("../models/projectCategories.model");
 let ProjectCategoryService = class ProjectCategoryService {
     async findAllProjectCategories() {
         const projectCategories = await projectCategories_model_1.ProjectCategoryModel.query().select().from('project_categories');

@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OfferRoute = void 0;
 const express_1 = require("express");
-const offers_controller_1 = require("@/controllers/offers.controller");
-const offers_dto_1 = require("@dtos/offers.dto");
-const validation_middleware_1 = require("@middlewares/validation.middleware");
+const offers_controller_1 = require("../controllers/offers.controller");
+const offers_dto_1 = require("../dtos/offers.dto");
+const validation_middleware_1 = require("../middlewares/validation.middleware");
 class OfferRoute {
     constructor() {
         this.path = '/offers';

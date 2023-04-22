@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { OfferService } from '@services/offers.service';
+import { OfferService } from '../services/offers.service';
 export declare class OfferController {
     offer: OfferService;
     getOffers: (req: Request, res: Response, next: NextFunction) => Promise<void>;

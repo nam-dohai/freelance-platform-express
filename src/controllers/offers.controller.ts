@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Container } from 'typedi';
-import { Offer } from '@interfaces/offers.interface';
-import { OfferService } from '@services/offers.service';
+import { Offer } from '../interfaces/offers.interface';
+import { OfferService } from '../services/offers.service';
 
 export class OfferController {
   public offer = Container.get(OfferService);

@@ -5,13 +5,13 @@ const tslib_1 = require("tslib");
 const bcrypt_1 = require("bcrypt");
 const jsonwebtoken_1 = require("jsonwebtoken");
 const typedi_1 = require("typedi");
-const _config_1 = require("@config");
-const httpException_1 = require("@exceptions/httpException");
-const users_model_1 = require("@models/users.model");
+const config_1 = require("../config");
+const httpException_1 = require("../exceptions/httpException");
+const users_model_1 = require("../models/users.model");
 const createToken = (user) => {
     const dataStoredInToken = { id: user.id };
     const expiresIn = 60 * 60;
-    return { expiresIn, token: (0, jsonwebtoken_1.sign)(dataStoredInToken, _config_1.SECRET_KEY, { expiresIn }) };
+    return { expiresIn, token: (0, jsonwebtoken_1.sign)(dataStoredInToken, config_1.SECRET_KEY, { expiresIn }) };
 };
 const createCookie = (tokenData) => {
     return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${tokenData.expiresIn};`;

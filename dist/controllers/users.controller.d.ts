@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { UserService } from '@services/users.service';
+import { UserService } from '../services/users.service';
 export declare class UserController {
     user: UserService;
     getUsers: (req: Request, res: Response, next: NextFunction) => Promise<void>;

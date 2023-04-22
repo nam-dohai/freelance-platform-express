@@ -1,6 +1,6 @@
 import { Service } from 'typedi';
-import { ProjectMapping } from '@interfaces/projectsMapping.interface';
-import { ProjectMappingModel } from '@models/projectsMapping.model';
+import { ProjectMapping } from '../interfaces/projectsMapping.interface';
+import { ProjectMappingModel } from '../models/projectsMapping.model';
 
 @Service()
 export class ProjectsMappingService {
