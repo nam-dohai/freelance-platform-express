@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const app_1 = require("@/app");
+const app_1 = require("./app");
 const auth_route_1 = require("@routes/auth.route");
 const users_route_1 = require("@routes/users.route");
 const userProfile_route_1 = require("@routes/userProfile.route");
