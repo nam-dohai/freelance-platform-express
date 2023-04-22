@@ -2,16 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.stream = exports.logger = void 0;
 const tslib_1 = require("tslib");
-const fs_1 = require("fs");
 const path_1 = require("path");
 const winston_1 = tslib_1.__importDefault(require("winston"));
 const winston_daily_rotate_file_1 = tslib_1.__importDefault(require("winston-daily-rotate-file"));
 const config_1 = require("../config");
 // logs dir
 const logDir = (0, path_1.join)(__dirname, config_1.LOG_DIR);
-if (!(0, fs_1.existsSync)(logDir)) {
-    (0, fs_1.mkdirSync)(logDir);
-}
 // Define log format
 const logFormat = winston_1.default.format.printf(({ timestamp, level, message }) => `${timestamp} ${level}: ${message}`);
 /*
