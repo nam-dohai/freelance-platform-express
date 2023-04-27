@@ -16,6 +16,16 @@ class UserProfileController {
                 next(error);
             }
         };
+        this.getUserProfileByUserId = async (req, res, next) => {
+            try {
+                const userId = req.query.id;
+                const findUserProfileData = await this.userProfile.findUserProfileByUserId(userId);
+                res.status(200).json({ data: findUserProfileData });
+            }
+            catch (error) {
+                next(error);
+            }
+        };
         this.createUserProfile = async (req, res, next) => {
             try {
                 const userProfileData = req.body;

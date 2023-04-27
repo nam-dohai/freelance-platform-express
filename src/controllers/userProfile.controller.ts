@@ -17,6 +17,17 @@ export class UserProfileController {
     }
   };
 
+  public getUserProfileByUserId = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = req.query.id as string;
+      const findUserProfileData: UserProfile = await this.userProfile.findUserProfileByUserId(userId);
+
+      res.status(200).json({ data: findUserProfileData });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public createUserProfile = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userProfileData: UserProfile = req.body;

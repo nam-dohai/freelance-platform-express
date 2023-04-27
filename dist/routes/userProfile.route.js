@@ -14,6 +14,7 @@ class UserProfileRoute {
     }
     initializeRoutes() {
         this.router.get(`${this.path}/:id`, this.userProfile.getUserProfileById);
+        this.router.get(`${this.path}`, this.userProfile.getUserProfileByUserId);
         this.router.post(`${this.path}`, (0, validation_middleware_1.ValidationMiddleware)(userProfile_dto_1.CreateUserProfileDto), this.userProfile.createUserProfile);
         this.router.put(`${this.path}/:id`, (0, validation_middleware_1.ValidationMiddleware)(userProfile_dto_1.UpdateUserProfileDto), this.userProfile.updateUserProfile);
         this.router.delete(`${this.path}/:id`, this.userProfile.deleteUserProfile);

@@ -15,6 +15,7 @@ export class UserProfileRoute implements Routes {
 
   private initializeRoutes() {
     this.router.get(`${this.path}/:id`, this.userProfile.getUserProfileById);
+    this.router.get(`${this.path}`, this.userProfile.getUserProfileByUserId);
     this.router.post(`${this.path}`, ValidationMiddleware(CreateUserProfileDto), this.userProfile.createUserProfile);
     this.router.put(`${this.path}/:id`, ValidationMiddleware(UpdateUserProfileDto), this.userProfile.updateUserProfile);
     this.router.delete(`${this.path}/:id`, this.userProfile.deleteUserProfile);

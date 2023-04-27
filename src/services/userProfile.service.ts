@@ -13,6 +13,13 @@ export class UserProfileService {
     return findUserProfile;
   }
 
+  public async findUserProfileByUserId(userId: string): Promise<UserProfile> {
+    const findUserProfile: UserProfile = await UserProfileModel.query().where('user_id', '=', userId).first();
+    if (!findUserProfile) throw new HttpException(409, "UserProfile Profile doesn't exist");
+
+    return findUserProfile;
+  }
+
   public async createUserProfile(userProfileData: CreateUserProfileDto): Promise<UserProfile> {
     // const findUserProfile: UserProfile = await UserProfileModel.query().select().from('users_profile').where('id', '=', userProfileData.id).first();
 

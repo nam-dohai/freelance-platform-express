@@ -12,6 +12,12 @@ let UserProfileService = class UserProfileService {
             throw new httpException_1.HttpException(409, "UserProfile Profile doesn't exist");
         return findUserProfile;
     }
+    async findUserProfileByUserId(userId) {
+        const findUserProfile = await userProfile_model_1.UserProfileModel.query().where('user_id', '=', userId).first();
+        if (!findUserProfile)
+            throw new httpException_1.HttpException(409, "UserProfile Profile doesn't exist");
+        return findUserProfile;
+    }
     async createUserProfile(userProfileData) {
         // const findUserProfile: UserProfile = await UserProfileModel.query().select().from('users_profile').where('id', '=', userProfileData.id).first();
         const createUserData = await userProfile_model_1.UserProfileModel.query()
